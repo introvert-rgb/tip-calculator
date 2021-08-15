@@ -238,6 +238,10 @@ header {
   background: #c5e4e7 !important;
 }
 
+.none {
+  display: none;
+}
+
 .people {
   margin-bottom: 1.5em;
 }
@@ -252,10 +256,6 @@ header {
   font-weight: 700;
   color: red;
   margin-bottom: 1em;
-}
-
-.people .people-container p {
-  display: none;
 }
 
 .people .people-box-container {

@@ -180,6 +180,10 @@ header {
     background: $lightGrayishCyan !important;
 }
 
+.none {
+    display: none;
+}
+
 .people {
     margin-bottom: 1.5em;
     .people-container {
@@ -188,9 +192,6 @@ header {
         font-weight: 700;
         color: red;
         margin-bottom: 1em;
-        p {
-            display: none;
-        }
     }
     .people-box-container {
         position: relative;
