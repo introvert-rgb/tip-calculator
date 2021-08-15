@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    background-color: $lightGrayishCyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+h4 {
+    color: $darkGrayishCyan;
+}
+
+input {
+    font-family: 'Space Mono', monospace;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    text-align: end;
+    color: $veryDarkCyan;
+    font-size: 1.5rem;
+}
+
+header {
+    padding: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    background-color: $white;
+    margin: 0 auto;
+    width: 900px;
+    border-radius: 15px;
+    display: flex;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, .2);
+}
+
+.first-part {
+    width: 60%;
+    padding: 1em 2em;
+    .bill-text {
+        margin-bottom: 1.5em;
+        h4 {
+            margin-top: 1em;
+            margin-bottom: 0.3em;
+        }
+    }
+    .amount-area {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 7px;
+        position: relative;
+        border: 2px solid transparent;
+        background-color: $lessLightGrayishCyan;
+        &:hover {
+            input {
+                border: 2px solid $strongCyan;
+            }
+        }
+        input {
+            padding: 0.3em 1em;
+            background-color: $lessLightGrayishCyan;
+            width: 100%;
+            border: 2px solid transparent;
+            border-radius: 7px;
+            &:focus {
+                border: 2px solid $strongCyan;
+            }
+        }
+        svg {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 1em;
+        }
+        label {
+            display: none;
+        }
+    }
+}
+
+.tip-selection {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 1.5em;
+    h4 {
+        margin-bottom: 1em;
+    }
+    .percent-containers {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        grid-gap: 1em;
+        width: 100%;
+        margin: 0.5em 0em;
+        border-radius: 7px;
+        overflow: hidden;
+        .custom-field {
+            width: 130px;
+            height: 50px;
+            font-size: 1.5rem;
+            margin-left: 0.2em;
+            border-radius: 7px;
+            background: $lessLightGrayishCyan;
+            input {
+                background: $lessLightGrayishCyan;
+                text-align: center;
+                height: inherit;
+                border-radius: 7px;
+                width: inherit;
+                &:focus {
+                    border-radius: 7px;
+                    border: 2px solid $strongCyan;
+                }
+            }
+            &:hover {
+                input {
+                    border-radius: 7px;
+                    border: 2px solid $strongCyan;
+                }
+            }
+        }
+        .individual-per-cent {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            input {
+                width: 0px;
+                height: 0px;
+                transition: all 250ms ease-in-out;
+                &::after {
+                    content: '';
+                    height: 50px;
+                    top: 0;
+                    position: absolute;
+                    cursor: pointer;
+                    width: 130px;
+                }
+            }
+            span {
+                display: flex;
+                width: 130px;
+                transition: all 250ms ease-in-out;
+                color: $white;
+                cursor: pointer;
+                font-weight: 700;
+                border-radius: 7px;
+                justify-content: center;
+                align-items: center;
+                height: 50px;
+                font-size: 1.5rem;
+                background: $veryDarkCyan;
+            }
+        }
+    }
+}
+
+.radio:checked~span {
+    background: $strongCyan !important;
+    color: $veryDarkCyan !important;
+    z-index: 1;
+}
+
+.radio:hover~span {
+    color: $veryDarkCyan !important;
+    background: $lightGrayishCyan !important;
+}
+
+.people {
+    margin-bottom: 1.5em;
+    .people-container {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+        color: red;
+        margin-bottom: 1em;
+        p {
+            display: none;
+        }
+    }
+    .people-box-container {
+        position: relative;
+        &:hover {
+            input {
+                border: 2px solid $strongCyan;
+            }
+        }
+        input {
+            padding: 0.3em 1em;
+            background-color: $lessLightGrayishCyan;
+            width: 100%;
+            border: 2px solid transparent;
+            border-radius: 7px;
+            &:focus {
+                border: 2px solid $strongCyan;
+            }
+        }
+        svg {
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            left: 1em;
+        }
+    }
+}
+
+.second-part {
+    background: $veryDarkCyan;
+    width: 40%;
+    display: flex;
+    padding: 1.5em 0em;
+    margin: 2em 2em 2em 0em;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 7px;
+    .final-bill {
+        .tip-amount {
+            display: flex;
+            justify-content: space-between;
+            margin: 2em;
+            .tip-value {
+                font-size: 2rem;
+                font-weight: 700;
+                color: $strongCyan;
+            }
+        }
+        .total-amount-person {
+            margin: 2em;
+            display: flex;
+            justify-content: space-between;
+            .total-value {
+                font-size: 2rem;
+                font-weight: 700;
+                color: $strongCyan;
+            }
+        }
+        h4 {
+            color: $white;
+        }
+        p {
+            font-size: 0.9em;
+            color: $darkGrayishCyan;
+            font-weight: 700;
+        }
+    }
+    .btn {
+        width: 80%;
+        margin: 0 auto;
+        .reset-btn {
+            width: 100%;
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 0.7em;
+            color: $veryDarkCyan;
+            background-color: $strongCyan;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 1em;
+            cursor: pointer;
+            transition: all 250ms ease-in-out;
+            &:hover {
+                background: $lightGrayishCyan !important;
+            }
+        }
+    }
+}

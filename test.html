@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Customize the label (the container) */
+        
+        .container {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+        }
+        
+        .container:hover input~.checkmark {
+            background-color: #ccc;
+        }
+        /* When the checkbox is checked, add a blue background */
+        
+        .container input:checked~.checkmark {
+            background-color: #2196F3;
+        }
+        /* Create the checkmark/indicator (hidden when not checked) */
+    </style>
+</head>
+
+<body>
+    <label class="container">
+  <input type="checkbox">
+  <span class="checkmark">5%</span>
+</label>
+</body>
+
+</html>

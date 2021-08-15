@@ -1,0 +1,46 @@
+@media screen and (max-width:600px) {
+    body {
+        height: auto;
+    }
+    .main-container {
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 2em;
+        padding-bottom: 2em;
+    }
+    .first-part {
+        width: 100%;
+    }
+    .second-part {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .tip-selection {
+        .percent-containers {
+            grid-template-columns: repeat(2, 1fr);
+            width: 100%;
+            margin: unset;
+            justify-content: space-between;
+            .custom-field {
+                width: 100%;
+                margin: 0;
+            }
+            .individual-per-cent {
+                width: 100%;
+                justify-content: unset;
+                input {
+                    &::after {
+                        width: 100%;
+                    }
+                }
+                span {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .radio:hover~span {
+        color: $veryDarkCyan !important;
+        background: $strongCyan !important;
+    }
+}
