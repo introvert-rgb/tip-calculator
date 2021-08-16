@@ -23,6 +23,7 @@ peopleCount.addEventListener('change', () => {
 
     } else {
         caution.classList.add('none');
+        calculate();
     }
 })
 
@@ -74,7 +75,7 @@ function calculate() {
 }
 
 
-peopleCount.onchange = calculate;
+
 billamount.onchange = calculate;
 for (let i = 0; i < radio.length; i++) {
     radio[i].onchange = calculate;
