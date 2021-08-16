@@ -18,6 +18,9 @@ peopleCount.addEventListener('change', () => {
     let count = document.querySelector('#people').value;
     if (count == 0) {
         caution.classList.remove('none');
+        printTip.innerHTML = `$ 0.00`;
+        printAmount.innerHTML = `$ 0.00`;
+
     } else {
         caution.classList.add('none');
     }
@@ -77,7 +80,9 @@ for (let i = 0; i < radio.length; i++) {
     radio[i].onchange = calculate;
 }
 
-resetBtn.addEventListener('click', () => {
+resetBtn.addEventListener('click', reset);
+
+function reset() {
     billamount.value = 0;
     peopleCount.value = 1;
 
@@ -91,4 +96,4 @@ resetBtn.addEventListener('click', () => {
         }
     }
 
-})
+}
