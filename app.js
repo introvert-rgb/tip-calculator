@@ -57,8 +57,12 @@ function validator(e) {
     }
 
 }
+// for (let i = 0; i < validation.length; i++) {
+//     validation[i].addEventListener('keypress', validator);
+// }
+
 for (let i = 0; i < validation.length; i++) {
-    validation[i].addEventListener('keypress', validator);
+    validation[i].addEventListener('keydown', validator);
 }
 
 function calculate() {
