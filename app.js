@@ -16,7 +16,7 @@ let peopleCount = document.querySelector('#people');
 
 peopleCount.addEventListener('change', () => {
     let count = document.querySelector('#people').value;
-    if (count == 0) {
+    if (count == 0 || isNaN(count)) {
         caution.classList.remove('none');
         peopleCount.classList.add('red');
         printTip.innerHTML = `$ 0.00`;
@@ -36,12 +36,13 @@ for (let i = 0; i < radio.length; i++) {
 }
 
 //when one percent is already selected and custom is focused then remove the selected percent
-
+let customValue = document.querySelector('#custom').value;
 custom.addEventListener('input', () => {
     for (let i = 0; i < radio.length; i++) {
-        if (radio[i].checked) {
+        if (radio[i].checked || isNaN(customValue)) {
             radio[i].checked = false;
             num = Number(custom.value);
+
             calculate();
         } else {
             num = Number(custom.value);
