@@ -8,7 +8,7 @@ let finalAmount = 0;
 
 let printTip = document.querySelector('.tip-value');
 let printAmount = document.querySelector('.total-value');
-let caution = document.querySelectorAll('.alert');
+let caution = document.querySelector('.alert');
 
 let tipPercents = [5, 10, 15, 25, 50];
 
@@ -80,7 +80,7 @@ let test1 = document.querySelector('.test');
 
 billamount.addEventListener('change', () => {
     let billAmount = document.getElementById('bill').value;
-    if (billAmount === NaN || billAmount === " ") {
+    if (isNaN(billAmount)) {
 
         test1.classList.remove('none');
     } else {
