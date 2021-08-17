@@ -282,6 +282,10 @@ header {
   margin-bottom: 1em;
 }
 
+.people .people-container p {
+  font-size: 0.9rem;
+}
+
 .people .people-box-container {
   position: relative;
 }
