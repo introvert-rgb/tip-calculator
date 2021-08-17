@@ -10,12 +10,24 @@
     }
     .first-part {
         width: 100%;
+        .bill-text {
+            .bill-contain {
+                p {
+                    font-size: 0.7rem;
+                }
+            }
+        }
     }
     .second-part {
         width: 90%;
         margin: 0 auto;
     }
     .tip-selection {
+        .tip-contain {
+            p {
+                font-size: 0.7rem;
+            }
+        }
         .percent-containers {
             grid-template-columns: repeat(2, 1fr);
             width: 100%;
@@ -42,5 +54,13 @@
     .radio:hover~span {
         color: $veryDarkCyan !important;
         background: $strongCyan !important;
+    }
+    .people {
+        .people-container {
+            flex-direction: column;
+            p {
+                font-size: 0.7rem;
+            }
+        }
     }
 }

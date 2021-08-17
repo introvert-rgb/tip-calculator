@@ -111,8 +111,19 @@ header {
     width: 100%;
     overflow: hidden;
     margin-bottom: 1.5em;
-    h4 {
-        margin-bottom: 1em;
+    .tip-contain {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h4 {
+            margin-bottom: 1em;
+        }
+        p {
+            font-size: 0.9rem;
+            color: red;
+            font-weight: 700;
+            margin-bottom: 1em;
+        }
     }
     .percent-containers {
         display: grid;

@@ -153,7 +153,26 @@ header {
   margin-bottom: 1.5em;
 }
 
-.tip-selection h4 {
+.tip-selection .tip-contain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tip-selection .tip-contain h4 {
+  margin-bottom: 1em;
+}
+
+.tip-selection .tip-contain p {
+  font-size: 0.9rem;
+  color: red;
+  font-weight: 700;
   margin-bottom: 1em;
 }
 
@@ -414,9 +433,15 @@ header {
   .first-part {
     width: 100%;
   }
+  .first-part .bill-text .bill-contain p {
+    font-size: 0.7rem;
+  }
   .second-part {
     width: 90%;
     margin: 0 auto;
+  }
+  .tip-selection .tip-contain p {
+    font-size: 0.7rem;
   }
   .tip-selection .percent-containers {
     -ms-grid-columns: (1fr)[2];
@@ -446,6 +471,15 @@ header {
   .radio:hover ~ span {
     color: #00494d !important;
     background: #26c0ab !important;
+  }
+  .people .people-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .people .people-container p {
+    font-size: 0.7rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
