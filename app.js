@@ -8,7 +8,7 @@ let finalAmount = 0;
 
 let printTip = document.querySelector('.tip-value');
 let printAmount = document.querySelector('.total-value');
-let caution = document.querySelector('.alert');
+let caution = document.querySelectorAll('.alert');
 
 let tipPercents = [5, 10, 15, 25, 50];
 
@@ -57,13 +57,11 @@ function validator(e) {
     }
 
 }
-// for (let i = 0; i < validation.length; i++) {
-//     validation[i].addEventListener('keypress', validator);
-// }
-
 for (let i = 0; i < validation.length; i++) {
-    validation[i].addEventListener('keydown', validator);
+    validation[i].addEventListener('keypress', validator);
 }
+
+
 
 function calculate() {
     let billAmount = Number(document.getElementById('bill').value);
@@ -77,10 +75,19 @@ function calculate() {
     printTip.innerHTML = "$" + " " + tip;
     printAmount.innerHTML = "$" + " " + finalAmount;
 }
+let test1 = document.querySelector('.test');
 
 
+billamount.addEventListener('change', () => {
+    let billAmount = document.getElementById('bill').value;
+    if (billAmount === NaN || billAmount === " ") {
 
-billamount.onchange = calculate;
+        test1.classList.remove('none');
+    } else {
+        test1.classList.add('none');
+        calculate();
+    }
+})
 for (let i = 0; i < radio.length; i++) {
     radio[i].onchange = calculate;
 }

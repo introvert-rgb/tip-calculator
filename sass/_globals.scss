@@ -51,9 +51,20 @@ header {
     padding: 1em 2em;
     .bill-text {
         margin-bottom: 1.5em;
-        h4 {
-            margin-top: 1em;
-            margin-bottom: 0.3em;
+        .bill-contain {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h4 {
+                margin-top: 1em;
+                margin-bottom: 0.3em;
+            }
+            p {
+                color: red;
+                margin-top: 1em;
+                margin-bottom: 0.3em;
+                font-weight: 700;
+            }
         }
     }
     .amount-area {
