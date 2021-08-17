@@ -18,10 +18,12 @@ peopleCount.addEventListener('change', () => {
     let count = document.querySelector('#people').value;
     if (count == 0) {
         caution.classList.remove('none');
+        peopleCount.classList.add('red');
         printTip.innerHTML = `$ 0.00`;
         printAmount.innerHTML = `$ 0.00`;
 
     } else {
+        peopleCount.classList.remove('red');
         caution.classList.add('none');
         calculate();
     }
@@ -75,17 +77,21 @@ function calculate() {
     printTip.innerHTML = "$" + " " + tip;
     printAmount.innerHTML = "$" + " " + finalAmount;
 }
-let test1 = document.querySelector('.test');
+let alpha = document.querySelector('.alpha');
 
 
 billamount.addEventListener('change', () => {
     let billAmount = document.getElementById('bill').value;
     if (isNaN(billAmount)) {
 
-        test1.classList.remove('none');
+        alpha.classList.remove('none');
+        billamount.classList.add('red');
     } else {
-        test1.classList.add('none');
+        alpha.classList.add('none');
+        billamount.classList.remove('red');
+
         calculate();
+
     }
 })
 for (let i = 0; i < radio.length; i++) {
