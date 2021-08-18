@@ -42,7 +42,7 @@ for (let i = 0; i < radio.length; i++) {
 
 //when one percent is already selected and custom is focused then remove the selected percent
 
-custom.addEventListener('change', () => {
+custom.addEventListener('focus', () => {
 
     for (let i = 0; i < radio.length; i++) {
         if (radio[i].checked) {
@@ -51,7 +51,7 @@ custom.addEventListener('change', () => {
     }
 });
 
-custom.addEventListener('input', () => {
+custom.addEventListener('change', () => {
     let customValue = document.querySelector('#custom').value;
     if (isNaN(customValue)) {
 
@@ -114,8 +114,8 @@ function calculate() {
 resetBtn.addEventListener('click', reset);
 
 function reset() {
-    billamount.value = 0;
-    peopleCount.value = 1;
+    billamount.value = "";
+    peopleCount.value = "1";
 
     printTip.innerHTML = `$ 0.00`;
     printAmount.innerHTML = `$ 0.00`;
