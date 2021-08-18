@@ -25,10 +25,11 @@ billamount.addEventListener('input', () => {
         alpha.classList.add('none');
         billamount.classList.remove('red');
 
-        calculate();
+
 
     }
 })
+billamount.onchange = calculate;
 
 for (let i = 0; i < radio.length; i++) {
     radio[i].addEventListener('click', () => {
@@ -84,7 +85,7 @@ peopleCount.addEventListener('change', () => {
 //validation of numerical keys only in input on keyboard
 function validator(e) {
     let keywordCode = e.keyCode ? e.keyCode : e.which;
-    if (keywordCode <= 45 || keywordCode >= 57) {
+    if (keywordCode <= 45 || keywordCode >= 58) {
         e.preventDefault();
 
     }
